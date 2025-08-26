@@ -252,3 +252,64 @@ int main()
     }
     
 }
+
+// You are using GCC
+#include<stdio.h>
+int main()
+{
+    int a;
+    int s = 0;
+    scanf("%d",&a);
+    int b = a%10;
+    int c=a/10;
+    while(c>0)
+    {
+        int d = (c%10)*10+b;
+        int i = 1;
+        while(i<=9)
+        {
+            if(i*i==d)
+            {
+                s=s+1;
+                break;
+            }
+            i++;
+        }
+        i=0;
+        b=c%10;
+        c = c/10;
+    }
+    printf("%d",s);
+}
+
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    int s =0;
+    scanf("%d",&a);
+    while(a>0)
+    {
+        int b = a%10;
+        int d = b/2;
+        int i = 2;
+        while(i<=d)
+        {
+            if(b%i==0)
+            {
+                s++;
+                break;
+            }
+            i++;
+        }
+        i=0;
+        if(s==0)
+        {
+            printf("%d\n",b);
+        }
+        a=a/10;
+        s=0;
+        
+    }
+}
